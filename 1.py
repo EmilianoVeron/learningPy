@@ -1,6 +1,6 @@
 # practicePython.org
 # The exercises are separated by functions, but is not modularized. - need to be doing after learning the basics -
-import os
+
 
 
 
@@ -24,6 +24,14 @@ def ex01():
 """
 2) Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
 """
+def ex02():
+    print("**Even or Odd ?**")
+    number = int(input("Pick a number: "));
+    if(number % 2  == 0):
+        print("Your number is Even !");
+    else:
+        print("Your number is Odd !");
+
 
 
 
@@ -31,7 +39,8 @@ def ex01():
 # ********************** MENU ********************
 opcion = 1;
 menu = "0) Exit." \
-       "\n1) Guess when you're gonna turn 100 years old."
+       "\n1) Guess when you're gonna turn 100 years old." \
+       "\n2) Even or Odd? "
 
 while (opcion != 0):
 
@@ -39,5 +48,7 @@ while (opcion != 0):
     opcion = int(input("Select an option: "))
     if opcion == 1:
         ex01()
+    elif opcion== 2:
+        ex02()
     else:
         print("select a valid option.")
