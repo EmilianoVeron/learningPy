@@ -66,13 +66,34 @@ def ex04():
         print(elem)
 
 
+"""
+Take two lists, say for example these two:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+and write a program that returns a list that contains only the elements that are common between the lists
+"""
+
+def ex05():
+    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    result = []
+    for n in a:
+        if n in b:
+            result.append(n)
+
+    for elem in result:
+        print(elem)
+
+
 # ********************** MENU ********************
 opcion = 1;
 menu = "0) Exit." \
        "\n1) Guess when you're gonna turn 100 years old." \
        "\n2) Even or Odd? " \
        "\n3) Numbers less than 5 in  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] " \
-       "\n4) Divisors of a number."
+       "\n4) Divisors of a number." \
+       "\n5) Elems repited on other list."
 
 while (opcion != 0):
 
@@ -86,5 +107,7 @@ while (opcion != 0):
         ex03()
     elif opcion ==4:
         ex04()
+    elif opcion == 5:
+        ex05()
     else:
         print("select a valid option.")
