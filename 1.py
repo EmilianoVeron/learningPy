@@ -34,13 +34,45 @@ def ex02():
 
 
 
+"""
+Take a list, say for example this one:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements of the list that are less than 5.
+"""
+
+def ex03():
+    myList = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+    for number in myList:
+        if(number < 5):
+            print(number)
+
+
+"""
+Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
+"""
+
+def ex04():
+    myNum = int(input("Get number divisors: "))
+    result = []
+    listRange = list(range(1, myNum + 1))
+    for number in listRange:
+        if(myNum % number == 0):
+            result.append(number)
+
+
+    for elem in result:
+        print(elem)
 
 
 # ********************** MENU ********************
 opcion = 1;
 menu = "0) Exit." \
        "\n1) Guess when you're gonna turn 100 years old." \
-       "\n2) Even or Odd? "
+       "\n2) Even or Odd? " \
+       "\n3) Numbers less than 5 in  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] " \
+       "\n4) Divisors of a number."
 
 while (opcion != 0):
 
@@ -48,7 +80,11 @@ while (opcion != 0):
     opcion = int(input("Select an option: "))
     if opcion == 1:
         ex01()
-    elif opcion== 2:
+    elif opcion == 2:
         ex02()
+    elif opcion == 3:
+        ex03()
+    elif opcion ==4:
+        ex04()
     else:
         print("select a valid option.")
